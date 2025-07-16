@@ -4,7 +4,8 @@
   "description": "Backend for the Maurice Allen Portfolio",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -13,6 +14,11 @@
     "mammoth": "^1.4.21",
     "mssql": "^7.3.0",
     "multer": "^2.0.1",
+    "nodemailer": "^7.0.5",
     "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "jest": "^30.0.4",
+    "supertest": "^7.1.3"
   }
 }

@@ -45,6 +45,12 @@ app.use('/api/certifications', certificationRoutes);
 app.use('/api/education', educationRoutes);
 app.use('/api/blogs', blogRoutes);
 
+const changelogRoutes = require('./routes/changelog');
+app.use('/api/changelog', changelogRoutes);
+
+const contactRoutes = require('./routes/contact');
+app.use('/api/contact', contactRoutes);
+
 app.get('/', (req, res) => {
     res.send('Backend server is running!');
 });

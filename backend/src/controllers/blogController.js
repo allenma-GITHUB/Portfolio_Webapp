@@ -24,3 +24,19 @@ exports.create = async (req, res) => {
         res.status(500).send('Error creating blog');
     }
 };
+
+exports.getById = async (req, res) => {
+    try {
+        const pool = req.app.locals.db;
+        const result = await pool.request()
+            .input('BlogID', sql.Int, req.params.id)
+            .query('SELECT * FROM Blogs WHERE BlogID = @BlogID');
+        if (result.recordset.length > 0) {
+            res.json(result.recordset[0]);
+        } else {
+            res.status(404).send('Blog post not found');
+        }
+    } catch (error) {
+        res.status(500).send('Error retrieving blog post');
+    }
+};

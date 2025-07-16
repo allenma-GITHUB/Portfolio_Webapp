@@ -10,22 +10,25 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Maurice Allen - Portfolio</title>
-        <meta name="description" content="Portfolio of Maurice Allen" />
+        <title>Maurice Allen - Executive Portfolio</title>
+        <meta name="description" content="Executive Portfolio of Maurice Allen" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <div id="hero" className="text-center p-10">
-          <h1 className="text-4xl font-bold">Maurice Allen</h1>
-          <p className="text-xl">Law Enforcement | IT | Cybersecurity | Software Development</p>
+        <section id="hero" className="text-center py-20 bg-gray-100">
+          <h1 className="text-5xl font-bold text-gray-800">Maurice Allen</h1>
+          <p className="text-xl text-gray-600 mt-4">A seasoned professional at the intersection of Law Enforcement, IT, and Software Development.</p>
+        </section>
+
+        <div className="container mx-auto px-6 py-10">
+          <Projects />
+          <Experiences />
+          <Skills />
+          <Certifications />
+          <Education />
+          <Blog />
         </div>
-        <Projects />
-        <Experiences />
-        <Skills />
-        <Certifications />
-        <Education />
-        <Blog />
       </main>
     </div>
   )

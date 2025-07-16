@@ -17,15 +17,19 @@ const Projects = () => {
     }, []);
 
     return (
-        <section id="projects" className="py-10">
-            <h2 className="text-3xl font-bold text-center">Projects</h2>
-            <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <section id="projects" className="py-20">
+            <h2 className="text-3xl font-bold text-center text-gray-800">Featured Projects</h2>
+            <div className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (
-                    <div key={project.ProjectID} className="border p-4 rounded-lg">
-                        <h3 className="font-bold text-xl">{project.ProjectName}</h3>
-                        <p>{project.Description}</p>
-                        <a href={project.ProjectURL} className="text-blue-500 hover:underline">View Project</a>
-                        <a href={project.RepositoryURL} className="ml-4 text-blue-500 hover:underline">View Code</a>
+                    <div key={project.ProjectID} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div className="p-6">
+                            <h3 className="font-bold text-xl text-gray-800">{project.ProjectName}</h3>
+                            <p className="text-gray-600 mt-2">{project.Description}</p>
+                            <div className="mt-4">
+                                <a href={project.ProjectURL} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">View Project</a>
+                                <a href={project.RepositoryURL} target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-600 hover:underline">View Code</a>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>

@@ -17,14 +17,16 @@ const Certifications = () => {
     }, []);
 
     return (
-        <section id="certifications" className="py-10">
-            <h2 className="text-3xl font-bold text-center">Certifications</h2>
-            <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <section id="certifications" className="py-20 bg-gray-50">
+            <h2 className="text-3xl font-bold text-center text-gray-800">Licenses & Certifications</h2>
+            <div className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
                 {certifications.map((cert) => (
-                    <div key={cert.CertificationID} className="border p-4 rounded-lg">
-                        <h3 className="font-bold text-xl">{cert.CertificationName}</h3>
-                        <p>{cert.IssuingOrganization}</p>
-                        <a href={cert.CredentialURL} className="text-blue-500 hover:underline">View Credential</a>
+                    <div key={cert.CertificationID} className="bg-white rounded-lg shadow-lg p-6">
+                        <h3 className="font-bold text-xl text-gray-800">{cert.CertificationName}</h3>
+                        <p className="text-gray-600 mt-2">{cert.IssuingOrganization}</p>
+                        <div className="mt-4">
+                            <a href={cert.CredentialURL} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">View Credential</a>
+                        </div>
                     </div>
                 ))}
             </div>

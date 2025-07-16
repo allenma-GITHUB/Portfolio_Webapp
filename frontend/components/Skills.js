@@ -17,11 +17,11 @@ const Skills = () => {
     }, []);
 
     return (
-        <section id="skills" className="py-10">
-            <h2 className="text-3xl font-bold text-center">Skills</h2>
-            <div className="mt-8 flex flex-wrap justify-center">
+        <section id="skills" className="py-20">
+            <h2 className="text-3xl font-bold text-center text-gray-800">Core Competencies</h2>
+            <div className="mt-12 flex flex-wrap justify-center gap-4">
                 {skills.map((skill) => (
-                    <div key={skill.SkillID} className="bg-gray-200 text-gray-800 rounded-full px-4 py-2 m-2">
+                    <div key={skill.SkillID} className="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full">
                         {skill.SkillName}
                     </div>
                 ))}
