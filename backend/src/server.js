@@ -6,11 +6,11 @@ const sql = require('mssql');
 
 // Database connection
 const dbConfig = {
-    user: process.env.DB_USER || 'default_user', // It's better to use environment variables
-    password: process.env.DB_PASSWORD || 'default_password',
     server: 'HOME-PC01\\SQLSERVER',
     database: 'AllenPortfolio',
+    driver: 'msnodesqlv8',
     options: {
+        trustedConnection: true,
         encrypt: false, // Set to true if you are using Azure SQL
         trustServerCertificate: true // Set to true for local dev / self-signed certs
     }
